@@ -1,0 +1,41 @@
+
+span{
+    color: red;
+    font-size: 40px;
+}
+h1{
+    background-color: palevioletred;
+    color: white;
+    padding: 2px;
+}
+table{
+    width: 100%;
+}
+th{
+    text-decoration: underline;
+    background-color: green;
+    color: white;
+    
+}
+
+tr:nth-child(even){
+    background-color: lightgray;
+
+}
+tr:nth-child(odd) td{
+    border-bottom: 1px green solid;
+
+}
+tr:nth-child(odd){
+    background-color: white;
+
+}
+tr:nth-child(even) td{
+    border-bottom:1px gray solid;
+
+}
+tr:hover{
+    background-color: palevioletred;
+    color: white;
+}
+
