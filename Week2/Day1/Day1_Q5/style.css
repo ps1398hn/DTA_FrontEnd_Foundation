@@ -1,0 +1,14 @@
+img{
+    width: 200px;
+    height: 200px;
+    animation: practice 5s;
+    animation-fill-mode:forwards;
+    position: relative;
+}
+@keyframes practice {
+    from{left: 0px; rotate: 0deg;}
+    to{
+        left: 300px; rotate: 90deg;
+    }
+    
+}
