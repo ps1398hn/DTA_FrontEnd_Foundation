@@ -1,0 +1,28 @@
+form{
+    width: 500px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 0 20px;
+}
+.nme{
+    display: flex;
+    flex-direction:column;
+}
+span{
+    color: red;
+}
+input{
+    margin: 5px;
+}
+.label{
+    margin-top: 30px;
+}
+select{
+    margin: 5px;
+}
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 6px;
+    border: none;
+}
