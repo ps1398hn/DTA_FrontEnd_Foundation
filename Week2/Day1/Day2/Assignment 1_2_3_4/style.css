@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align-last: center;
+}
+img{
+    height: 200px;
+    width: 150px;
+}
+label{
+    color: red;
+}
+.form{
+    width: 700px;
+    margin: auto;
+    border: 2px solid blue;
+}
