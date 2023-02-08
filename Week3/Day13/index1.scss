@@ -1,0 +1,28 @@
+$defaultsize:8;
+h1{
+    text-align: center;
+    border: 2px solid black;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    
+
+}
+@for $i from 1 to 7{
+    .ts-#{$i}{
+    text-align: center;
+    padding:1% 10%;
+    margin:8px;
+    font-weight: 500;
+    font-size: $defaultsize*$i*1px;
+    @if($i<4){
+        border: 2px solid red;
+        color: red;
+    }
+    @else{
+        border:2px solid green;
+        color: green;
+    }
+
+}
+
+}
