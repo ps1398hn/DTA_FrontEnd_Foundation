@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .img{
+            height: 100px;
+            width: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>User Login</legend>
+        <Label>User Name: </Label>
+        <input type="text" id="text"><br><br>
+        <label>Password: </label>
+        <input type="password"><br>
+        <button onclick="login()">Login</button><br>
+        <p id="disp"></p>
+    </fieldset><br>
+    <fieldset>
+        <legend>Product</legend>
+        <Label>Product Name: </Label>
+        <input type="text" id="pro" value="Printer"><br><br>
+        <label>Unit Price: </label>
+        <input type="text" id="price"><br><br>
+        <label>Quantity: </label>
+        <input type="number" id="qty"><br><br>
+        <button onclick="product()">Get Total</button><br>
+        <p id="amt"></p>
+    </fieldset><br>
+    <fieldset>
+        <legend>Mathematical Operations</legend>
+        <Label>First Number: </Label>
+        <input type="number" id="fnum"><br><br>
+        <label>Second Number: </label>
+        <input type="number" id="snum"><br><br>
+        <button onclick="getResult(event)" value="add">ADD</button>
+        <button onclick="getResult(event)" value="sub">SUB</button>
+        <button onclick="getResult(event)"value="mul">MUL</button>
+        <p id="res"></p>
+    </fieldset><br><br>
+
+    <hr>
+    <h3>Question 5 </h3>
+		<hr/>
+		 
+		Select City Code  :  
+		<select id="s1">
+			<option>HYD</option>
+			<option>BLR</option>
+			<option>MUM</option>
+			<option>GUR</option>
+		</select>
+		 
+		<input  type="button"  value="Get Branch Details"  onclick="fn_getData()"  />
+		<p  id="p1"></p>
+        <p id="a"></p>
+        <!-- <div id="imge"></div> -->
+
+        <hr>
+        <h3>Question 6</h3>
+        <button onclick="loop()" >Get Data</button>
+
+
+
+    <script>
+        function login(){
+            var i=document.getElementById("text")
+            var disp=document.getElementById("disp")
+            
+            if(i.value=="admin"){
+                disp.innerText="Welcome Admin"
+                disp.style.color="green"
+                // disp.style.color="white"
+
+            }
+            else{
+                disp.innerText="Invalid user id or password"
+                disp.style.color="red"
+                // disp.style.color="white"
+            }
+        }
+        function product(){
+            var p=document.getElementById("price")
+            var q=document.getElementById("qty")
+            var a=p.value * q.value
+            document.getElementById("amt").innerText=a
+        }
+        function getResult(event){
+            const{name,value}=event.target
+            var a=document.getElementById("fnum")
+            var b=document.getElementById("snum")
+            var r=document.getElementById("res")
+            if(value=="add"){
+                var res=parseInt(a.value)+parseInt(b.value)
+                r.innerHTML=res
+            }
+            if(value=="sub"){
+                var res=parseInt(a.value)-parseInt(b.value)
+                r.innerHTML=res
+            }
+            if(value=="mul"){
+                var res=parseInt(a.value)*parseInt(b.value)
+                r.innerHTML=res
+            }
+            
+        }
+        
+        
+        function  fn_getData()
+				{
+					var  paraObj  =  document.getElementById("p1");	
+                    var  a  =  document.getElementById("a");	
+
+					var  selectObj  =  document.getElementById("s1");
+                    var x =document.createElement("img")
+                    
+	
+                    
+					
+					
+				switch( selectObj.value  )
+				{ 
+							case "HYD" :    	paraObj.innerHTML = "You have selected Hyderabad Branch"
+                            a.innerHTML="Address: Gali no. 2 <br/>"
+                            x.setAttribute("src", "https://media.glassdoor.com/lst2x/77/cc/ca/5b/office.jpg");
+                            x.setAttribute("width", "304");
+                            x.setAttribute("height", "228");
+                            x.setAttribute("alt", "The Pulpit Rock");
+                            a.appendChild(x);
+                            
+
+                            
+							break; 
+														
+							case "BLR" :    	paraObj.innerHTML = "You have selected Bangalore Branch";  
+                            a.innerHTML="Address: Gali no. 3 <br/>"
+                            x.setAttribute("src", "https://images.unsplash.com/photo-1481253127861-534498168948?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80");
+                            x.setAttribute("width", "304");
+                            x.setAttribute("height", "228");
+                            x.setAttribute("alt", "The Pulpit Rock");
+                            a.appendChild(x);
+							break; 
+														
+							case "MUM" :    	paraObj.innerHTML = "You have selected Mumbai Branch";  
+                            a.innerHTML="Address: Gali no. 4 <br/>"
+                            x.setAttribute("src", "https://images.unsplash.com/photo-1554435493-93422e8220c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80");
+                            x.setAttribute("width", "304");
+                            x.setAttribute("height", "228");
+                            x.setAttribute("alt", "The Pulpit Rock");
+                            a.appendChild(x);
+							break; 
+							
+							case "GUR" :    	paraObj.innerHTML = "You have selected Gurgaon Branch";  
+                            a.innerHTML="Address: Gali no. 5 <br/>"
+                            x.setAttribute("src", "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+                            x.setAttribute("width", "304");
+                            x.setAttribute("height", "228");
+                            x.setAttribute("alt", "The Pulpit Rock");
+                            a.appendChild(x);
+							break; 
+					}
+						 
+					
+				}
+
+    </script>
+    
+</body>
+</html>

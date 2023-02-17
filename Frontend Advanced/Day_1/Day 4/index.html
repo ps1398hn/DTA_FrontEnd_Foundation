@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>3rd Question</title>
+</head>
+<body>
+    <h3>Given Array-[22,46,51,88,90]</h3>
+    <button class="btn btn-primary btn-sm" onclick="main()">Find Even Numbers</button>
+    <p  id="disp"></p>
+    <hr>
+    <fieldset>
+        <legend>x power y</legend>
+        <input type="number" id="fnum" placeholder="Enter x"><br><br>
+        <input type="number" id="snum" placeholder="Enter y"><br><br>
+        <button class="btn btn-primary btn-sm" onclick="call()">Find Power</button>&nbsp;<span id="disp1"></span>
+
+    </fieldset>
+    <hr>
+    <input type="text" placeholder="Enter String" id="str">
+    <button class="btn btn-primary btn-sm"  onclick="word()">Find Words</button>&nbsp;<span id="disp2"></span>
+
+
+    <script>
+        function main(){
+        var arr=[22,46,51,88,90]
+        var res=[]
+        function findEven(i){
+            if(i%2==0){
+                res.push(i)
+                
+            }
+            var str="Even number in given array is "+ " "+ res.length
+            document.getElementById("disp").innerHTML=str +"<br/> "+ "  Numbers are: "+"<strong>"+ res+"</strong>"
+
+            
+        }
+        arr.map(findEven)
+    }
+
+    function call(){
+        var a=document.getElementById("fnum")
+        var b=document.getElementById("snum")
+        var c=a.value**b.value
+        document.getElementById("disp1").innerHTML="<strong>"+"Result is :"+"</strong>"+" "+ c
+    }
+    function word(){
+        var s=document.getElementById("str")
+        ns=s.value.split(" ")
+        document.getElementById("disp2").innerHTML="No. of words in the Strings are: "+ ns.length
+        
+    }
+        
+    </script>
+</body>
+</html>

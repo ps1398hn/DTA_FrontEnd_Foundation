@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+    <style>
+        span{
+            color: red;
+            font-size: x-small;
+            margin-bottom:20px ;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <form action="" style="width:50%">
+        <input type="text" placeholder="Customer Name" id="namee"><br>
+        <span id="nameerror"></span><br>
+        <input type="text" placeholder="Source" id="source"><br>
+        <span id="sourceerror"></span><br>
+        <input type="text" placeholder="Destination " id="dest"><br>
+        <span id="desterrorerror"></span><br>
+        <input type="text" placeholder="Enter Number" id="num"><br>
+        <span id="numerror"></span><br>
+        <input type="email" placeholder="Enter Email" id="email"><br>
+        <span id="emailerror"></span><br>
+        <button onclick="validate(event)">Validate</button>
+    </form>
+    <script>
+        function validate(event){
+            event.preventDefault();
+
+            var i=document.getElementById("namee")
+            // i.setAttribute("required",'true')
+            var s=document.getElementById("source")
+            var d=document.getElementById("dest")
+            var n=document.getElementById("num")
+            // n.setAttribute("required","true")
+            var e=document.getElementById("email")
+            // e.setAttribute("required","true")
+            if(i.value.length==0){
+                document.getElementById("nameerror").innerText="Please enter Name"
+            }
+            
+            if(s.value==d.value){
+                document.getElementById("sourceerror").innerText="Source Station and Destination should not be same"
+                
+            }
+            if(n.value.length!=10){
+                document.getElementById("numerror").innerText="Number should be of 10 Digits"
+
+            }
+            if(e.value.length==0){
+                document.getElementById("emailerror").innerText="Please enter Email"
+
+            }
+
+            
+        }
+
+    </script>
+    
+</body>
+</html>
