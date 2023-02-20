@@ -1,0 +1,43 @@
+@import "navbar";
+@import "footer";
+.coloredBar{
+    padding:2%;
+    background-image: linear-gradient(to right,#2c5edb,#04c278);
+    color: white;
+    .bi{
+        background-color: white;
+        color:#2c5edb !important;
+        padding: 2px 4px ;
+        border-radius: 50%;
+        font-size:x-small;
+        -webkit-text-stroke: 2px;
+        margin: 0 5px;
+    }
+    .lSpan{
+        color:#02c873;    
+    }
+}
+.box{
+    display: flex;
+}
+.box-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.right{
+    margin-top: 90px;
+    margin-left: 40px;
+    width: 50%;
+}
+.left{
+    margin: 60px;
+
+}
+p{
+    // margin-top: 10px;
+    line-height: 30px;
+    font-size: smaller;
+}
+h2{
+    margin-bottom: 0;
+}
